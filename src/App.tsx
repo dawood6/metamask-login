@@ -1,11 +1,12 @@
-import "./App.css";
+import { ChakraProvider } from "@chakra-ui/react";
+import Layout from "./components/Layout";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-     Hello World
-    </div>
-  );
+    <ChakraProvider>
+      <Layout>
+        <p style={{ color: "white" }}>Hello, world!</p>
+      </Layout>
+    </ChakraProvider>
+  )
 }
-
-export default App;
